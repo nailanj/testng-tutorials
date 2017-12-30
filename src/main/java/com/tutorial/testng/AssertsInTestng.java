@@ -1,0 +1,26 @@
+package com.tutorial.testng;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AssertsInTestng {
+
+	@Test()
+	public void assertSuccessTest() {
+		// Comparing two same Strings.
+		Assert.assertEquals("testng", "testng");
+	}
+
+	@Test()
+	public void assertFailureTest() {
+		// Comparing two different Strings
+		Assert.assertEquals("testng", "java","String objects are not equal,So Assert Failure.");
+	}
+
+	@Test()
+	public void exceptionFailureTest() {
+		String ptr = null;
+		// This line of code throws NullPointerException
+		ptr.equals("testng");
+	}
+}
